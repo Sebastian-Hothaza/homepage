@@ -29,14 +29,12 @@ body{
 
 .header {
     display: flex;
-    background-color: salmon;
-    justify-content: center;
     align-items: center;
     margin-top: var(--verticalPad);
 }
 
 
-.header img{
+.header img, footer img{
     height: 30vh; 
     min-height: var(--imgMINH);
     max-height: var(--imgMAXH);
@@ -60,7 +58,7 @@ body{
     margin-bottom: 1em;
 }
 
-.header_links{
+.contact_links{
     display: flex;
     justify-content: flex-end;
     margin-top: 2em;
@@ -75,19 +73,12 @@ body{
     transition: transform .5s;
 }
 
-
-
-
-.content h1{
-    /* background-color: beige; */
-    margin-bottom: 1em;
-}
-
 .projects_container {
     display: grid;
     /* background-color: lightgray; */
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 2em;
+    margin-top: 1em;
 
     justify-items: center;
     align-items: center;
@@ -189,4 +180,11 @@ i.material-symbols-outlined{
 
 i.material-symbols-outlined:hover, .devicon-linkedin-plain:hover{
     transform: scale(1.2);
+}
+
+
+@media (max-width: 800px){
+    .header, .footer{
+        flex-direction: column;
+    }
 }
