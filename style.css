@@ -10,36 +10,36 @@ a {
 
 :root {
     --accent-color: skyblue;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    --imgMAXH: 500px;
+    --imgMINH: 300px;
+    --verticalPad: 2em;
+    --pageMAXW: 1200px;
+    --pageMINW: 800px;
+    
 }
 
 body{
     display: flex;
     flex-direction: column;
     gap: 5em;
-    max-width: 1200px;
+    max-width: var(--pageMAXW);
     margin: auto;
-    padding: 2em 2em;
+    padding: 0 2em;
 }
 
 .header {
     display: flex;
-    /* background-color: salmon; */
+    background-color: salmon;
     justify-content: center;
     align-items: center;
-
-    height: 30vh;
-    min-height: 300px;
-    min-width: 800px;
-
+    margin-top: var(--verticalPad);
 }
 
-.header_image_container{
-    height: 100%;
-}
 
-.header_image_container img{
-    height: 100%;
+.header img{
+    height: 30vh; 
+    min-height: var(--imgMINH);
+    max-height: var(--imgMAXH);
     object-fit: contain;
     vertical-align: middle;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -138,7 +138,6 @@ i.material-symbols-outlined{
     transition: transform .5s;
 }
 
-/* Project Description */
 .project_desc{
     padding: 1em 2em;
     font-size: 1em;
@@ -149,18 +148,34 @@ i.material-symbols-outlined{
 
 .footer {
     display: flex;
-    background-color: greenyellow;
-    justify-content: space-around;
-    padding: 10px;
+    justify-content: space-between;
+    margin-bottom: var(--verticalPad);
 }
 
-.footer_image{
-    background-color: white;
+
+
+.footer img{
+    height: 30vh;
+    min-height: var(--imgMINH);
+    max-height: var(--imgMAXH);
+    object-fit: contain;
+    vertical-align: middle;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.footer_about{
-    background-color: white;
+.footer_about h1{
+    margin-bottom: 1em;
 } 
+
+.footer_about p{
+    padding: .8em 0;
+    
+} 
+
+.footer_about span{
+    vertical-align: middle;
+    margin-right: .5em;
+}
 
 .project_card:hover{
 
