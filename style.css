@@ -37,7 +37,6 @@ body{
     display: flex;
     align-items: center;
     margin-top: var(--verticalPad);
-    /* background: linear-gradient(90deg, blue 50%, white 50%) */
 }
 
 .header img, footer img{
@@ -55,13 +54,13 @@ body{
     flex-direction: column;
 
 
-    padding: 1em .5em;
+    padding: .5em .5em;
     max-height: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .header_about h1{
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 .contact_links{
@@ -91,7 +90,7 @@ body{
 }
 
 .project_card {
-    /* background-color: white; */
+    background-color: ghostwhite;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: transform .3s;
     min-height: 500px;
