@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none; 
+}
+
+:root {
+    --accent-color: skyblue;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2em 2em;
+}
+
+.header {
+    display: flex;
+    /* background-color: salmon; */
+    justify-content: center;
+    align-items: center;
+
+    height: 30vh;
+    min-height: 300px;
+    min-width: 800px;
+
+}
+
+.header_image_container{
+    height: 100%;
+}
+
+.header_image_container img{
+    height: 100%;
+    object-fit: contain;
+    vertical-align: middle;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ .header_about{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+
+    padding: 1em .5em;
+    max-height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header_about h1{
+    margin-bottom: 1em;
+}
+
+.header_links{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2em;
+    margin-right: 1em;
+    gap: 1em;
+} 
+
+.devicon-linkedin-plain{
+    display: block;
+    font-size: 2em;
+    color: #0077b5;
+    transition: transform .5s;
+}
+
+
+
+
+.content h1{
+    /* background-color: beige; */
+    margin-bottom: 1em;
+}
+
+.projects_container {
+    display: grid;
+    /* background-color: lightgray; */
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 2em;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.project_card {
+    /* background-color: white; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform .3s;
+    min-height: 500px;
+}
+
+
+
+.project_img{
+    width: 100%;
+}
+
+.project_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.project_header>:nth-child(1){
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.project_header>:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    gap: .5em
+}
+
+.devicon-github-original{
+    display: block;
+    font-size: 2em;
+    color: purple;
+    transition: transform .5s;
+}
+
+i.material-symbols-outlined{
+    display: block;
+    font-size: 2.2em;
+    color: navy;
+    transition: transform .5s;
+}
+
+/* Project Description */
+.project_desc{
+    padding: 1em 2em;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+
+
+.footer {
+    display: flex;
+    background-color: greenyellow;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.footer_image{
+    background-color: white;
+}
+
+.footer_about{
+    background-color: white;
+} 
+
+.project_card:hover{
+
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 0 var(--accent-color), 0 6px 20px 0 var(--accent-color);
+}
+
+.devicon-github-original:hover{
+    transform: scale(1.2) rotate(360deg);
+}
+
+i.material-symbols-outlined:hover, .devicon-linkedin-plain:hover{
+    transform: scale(1.2);
+}
